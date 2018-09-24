@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card">  
+      <div class="card-body">  
+        <form (submit)="onSubmitAddUser()">
+          <section class="login-form mx-auto">
+            <div class="form-group">
+              <input type="email" name="email" id="registerUser" [(ngModel)]="email" placeholder="Email" required class="form-control input-lg" />
+            </div>
+            <div class="form-group">
+              <input type="password" [(ngModel)]="password" class="form-control input-lg" id="registerPass" placeholder="Password" required="" />
+            </div>
+            <div class="col-md-4">       
+              <button type="submit" name="create" class="btn btn-primary btn-block btn-lg">Registrarme</button>
+            </div>       
+          </section>
+        </form>
+      </div>
+    </div>  
+  </div>
+</div>     
