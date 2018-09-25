@@ -3,18 +3,18 @@
   <div class="row">
     
     <div class="col-md-4">
-      <form action="">
+      <form (submit)="onSubmitLogin()">
       
       <section class="login-form mx-auto">
         <img src="http://i.imgur.com/RcmcLv4.png" class="img-responsive" />
         <div class="form-group">
-          <input type="email" name="email" id="nameUser" placeholder="Email" required class="form-control input-lg" />
+          <input type="email" name="email" id="nameUser" [(ngModel)]="email" placeholder="Email" required class="form-control input-lg" />
         </div>
         <div class="form-group">
-          <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
+          <input type="password" class="form-control input-lg" id="password" [(ngModel)]="password" placeholder="Password" required="" />
         </div>
         <div class="col-md-4">       
-          <button type="button" name="signIn" class="btn btn-primary btn-block btn-lg">Sign in</button>
+          <button type="submit" name="signIn" class="btn btn-primary btn-block btn-lg">Sign in</button>
         </div>
         <div>
           <a href="#" routerLink="/register">Crear cuenta</a>   
