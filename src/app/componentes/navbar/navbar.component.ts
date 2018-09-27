@@ -15,16 +15,16 @@ export class NavbarComponent implements OnInit {
     public authService: AuthService
   ) { }
 
-  ngOnInit() {
-    this.authService.getAuth().suscribe(auth => {
+  ngOnInit() { //getAuth nos devuelde el estado, si es que esta logueado o no
+    this.authService.getAuth().subscribe(auth => {//subscribe ??
       if (auth) {
         this.isLogin = true;
         this.userName = auth.displayName;
-        this.userEmail =auth.email;
+        this.userEmail = auth.email;
       } else {
         this.isLogin = false;
       }
-    })
+    });
   }
 
   onClickLogout(){

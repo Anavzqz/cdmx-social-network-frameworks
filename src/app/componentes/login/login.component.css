@@ -1,10 +1,45 @@
+.container {
+    background-image: url(../../../assets/cat-984367_960_720.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
 .login-form {
-    background-color: #D6EAF8;
     position: relative;
-    display: block;
-    text-align: center;
-    height: 400px;
-    width: 80%;
-    margin-top: 4em;
-    margin-left: 0%;
+}
+
+.input-lg {
+    width: 260px;
+    height: 30px;
+    border: solid gray;
+    border-radius: 6px;
+    margin: 10px;
+}
+.btn-primary {
+    width: 260px;
+    height: 30px;
+    border-radius: 6px;
+    margin: 10px;
+    color: black;
+    background-color: white;
+    border: solid gray;
+}
+.btn-lg {
+    width: 160px;
+    height: 30px;
+    border-radius: 6px;
+    margin: 10px;
+    border: none;
+    font-family: 'Chicle', cursive;
+}
+.btn-facebook {
+    color: white;
+    background-color: blue;
+}
+.btn-google {
+    color: white;
+    background-color: red;
 }

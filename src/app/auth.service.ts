@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-//import * as firebase from 'firebase/app';
+//import *as firebase from 'firebase/app';
 import { map } from 'rxjs/operators';
 
 
@@ -10,22 +10,23 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
+
   constructor(
     public afAuth: AngularFireAuth
   ) { }
 
   
-  registerUser(email: string, pass: string){
+  registerUser(email: string, password: string){
     return new Promise((resolve, reject) => {
-      this.afAuth.auth.createUserWithEmailAndPassword(email, pass)
+      this.afAuth.auth.createUserWithEmailAndPassword(email, password)
       .then( userData  => resolve(userData),
       err => reject (err));
     });
   }
 
-  loginEmail(email: string, pass: string){
+  loginEmail(email: string, password: string){
     return new Promise((resolve, reject) => {
-      this.afAuth.auth.signInWithEmailAndPassword(email, pass)
+      this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then( userData  => resolve(userData),
       err => reject (err));
     });

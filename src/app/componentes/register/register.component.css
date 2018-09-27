@@ -1,0 +1,16 @@
+.input-lg {
+    width: 260px;
+    height: 30px;
+    border: solid gray;
+    border-radius: 6px;
+    margin: 10px;
+}
+.btn-primary {
+    width: 260px;
+    height: 30px;
+    border-radius: 6px;
+    margin: 10px;
+    color: black;
+    background-color: white;
+    border: solid gray;
+}

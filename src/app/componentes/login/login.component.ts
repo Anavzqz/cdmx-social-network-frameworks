@@ -18,13 +18,20 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
+
 onSubmitLogin() {
   this.authService.loginEmail(this.email, this.password)
   .then( (res) => {
-    this.router.navigate(['/timeline']);
+    //this.router.navigate(['/timeline']);
+  console.log('error');
   }).catch((err) => {
     console.log(err);
-    this.router.navigate(['/login'])
-  })
+    this.router.navigate(['/register'])
+  });
+};
+
+onClickGoogle() {
+  console.log('funciona');
 }
+
 }
