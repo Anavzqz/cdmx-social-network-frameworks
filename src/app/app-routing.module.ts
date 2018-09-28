@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegisterComponent } from './componentes/register/register.component';
 import { TimelineComponent } from './componentes/timeline/timeline.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
 
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'timeline', component: TimelineComponent}
+  {path: 'timeline', component: TimelineComponent},
+  {path: 'navbar', component: NavbarComponent}
 ];
 
 @NgModule({
