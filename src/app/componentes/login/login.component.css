@@ -1,14 +1,21 @@
 .container {
-    background-image: url(../../../assets/cat-984367_960_720.jpg);
+    background-image: url(../../../assets/pexels-photo-374845.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display:flex;
+    height: 800px;
+    opacity: .7;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
+
 .login-form {
-    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    position: flex;
+    margin: 10px;
 }
 
 .input-lg {
@@ -19,27 +26,33 @@
     margin: 10px;
 }
 .btn-primary {
-    width: 260px;
-    height: 30px;
-    border-radius: 6px;
-    margin: 10px;
-    color: black;
-    background-color: white;
-    border: solid gray;
-}
-.btn-lg {
     width: 160px;
     height: 30px;
     border-radius: 6px;
     margin: 10px;
-    border: none;
+    color: gray;
+    background-color: white;
+    border: solid gray;
     font-family: 'Chicle', cursive;
 }
+
 .btn-facebook {
+    font-size: 1em;
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
     color: white;
     background-color: blue;
+    margin-left: 10px;
 }
 .btn-google {
+    font-size: 1em;
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
     color: white;
     background-color: red;
+    margin-left: 10px;
 }

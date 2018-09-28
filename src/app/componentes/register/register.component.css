@@ -1,3 +1,12 @@
+.register {
+    background-image: url(../../../assets/pexels-photo-1084425.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
 .input-lg {
     width: 260px;
     height: 30px;
