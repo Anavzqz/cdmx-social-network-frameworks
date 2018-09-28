@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-//import * as firebase from 'firebase/app';
+import * as firebase from 'firebase/app';
 import { map } from 'rxjs/operators';
 
 
@@ -32,6 +32,9 @@ export class AuthService {
     });
   }
 
+  loginGoogle() {
+    return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
   getAuth(){
     return this.afAuth.authState.pipe(map(auth => auth));
   }

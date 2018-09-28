@@ -30,7 +30,10 @@ onSubmitLogin() {
 };
 
 onClickGoogle() {
-  console.log('funciona');
+  this.authService.loginGoogle()
+  .then( (res) => {
+    this.router.navigate(['/timeline']);
+  }).catch( err => console.log(err.message));
 }
 
 }

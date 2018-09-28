@@ -3,9 +3,16 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    font-family: 'Lobster', cursive;
     display: flex;
+    height: 800px;
     align-items: center;
+    color: white;
+}
+.card-body {
+    font-size: 1.2em;
     justify-content: left;
+    background: rgba(0,0,0,.5);
 }
 .input-lg {
     width: 260px;
@@ -15,11 +22,13 @@
     margin: 10px;
 }
 .btn-primary {
+    font-family: 'Lobster', cursive;
+    font-size: 1em;
     width: 260px;
     height: 30px;
     border-radius: 6px;
     margin: 10px;
-    color: black;
+    color: gray;
     background-color: white;
     border: solid gray;
 }
