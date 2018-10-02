@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../auth.service';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -21,6 +21,7 @@ export class NavbarComponent implements OnInit {
         this.isLogin = true;
         this.userName = auth.displayName;
         this.userEmail = auth.email;
+        //this.userPhoto = auth.photoUrl;
       } else {
         this.isLogin = false;
       }

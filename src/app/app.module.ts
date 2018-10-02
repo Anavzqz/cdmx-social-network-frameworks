@@ -9,11 +9,15 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { TimelineComponent } from './componentes/timeline/timeline.component';
 import { RegisterComponent } from './componentes/register/register.component';
 
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import { FlashMessagesService } from 'angular2-flash-messages';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
-import { environment} from '../environments/environment';
-import { AuthService } from './auth.service';
+import { environment } from '../environments/environment';
+import { AuthService } from '../services/auth.service';
+//import { AuthGuard } from './guards/auth.guard';
  
 @NgModule({
   declarations: [
@@ -29,8 +33,9 @@ import { AuthService } from './auth.service';
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    FlashMessagesModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, FlashMessagesService],//AuthGuard
   bootstrap: [AppComponent]
 })
 export class AppModule { }
