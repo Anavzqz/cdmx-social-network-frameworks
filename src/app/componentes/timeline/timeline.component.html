@@ -1,6 +1,11 @@
-<div>
 <app-navbar></app-navbar>
+<div class="row">
+  <div class="col-md-8" *ngFor="let post of posts">
+    <div class="btn-roup pull-right mt-4">
+      <a routerLink="/edit/" class="btn btn-dark">Editar</a>
+      <a href="#" class="btn btn-danger" (click)="onClickDelete()">Borrar</a>
+      <span class="mb-0">{{post.date | date: 'dd-MMM'}}</span>
+    </div>
+  </div>
 </div>
-<h2>
-  muro en construcción!
-</h2>
+<app-newpost></app-newpost>

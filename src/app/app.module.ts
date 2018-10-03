@@ -8,15 +8,20 @@ import { LoginComponent } from './componentes/login/login.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { TimelineComponent } from './componentes/timeline/timeline.component';
 import { RegisterComponent } from './componentes/register/register.component';
+import { EditComponent } from './componentes/edit/edit.component';
+import { NewpostComponent } from './componentes/newpost/newpost.component';
 
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { FlashMessagesService } from 'angular2-flash-messages';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { environment } from '../environments/environment';
 import { AuthService } from '../services/auth.service';
+import { PostService } from '../services/post.service';
+//import { ErrpageComponent } from './errpage/errpage.component';
 //import { AuthGuard } from './guards/auth.guard';
  
 @NgModule({
@@ -25,7 +30,10 @@ import { AuthService } from '../services/auth.service';
     LoginComponent,
     NavbarComponent,
     TimelineComponent,
-    RegisterComponent
+    RegisterComponent,
+    EditComponent,
+    NewpostComponent,
+    //ErrpageComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +41,10 @@ import { AuthService } from '../services/auth.service';
     FormsModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
     FlashMessagesModule
   ],
-  providers: [AuthService, FlashMessagesService],//AuthGuard
+  providers: [AuthService, FlashMessagesService, PostService],//AuthGuard
   bootstrap: [AppComponent]
 })
 export class AppModule { }
