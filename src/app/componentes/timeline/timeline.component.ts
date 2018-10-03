@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../../services/post.service';
-import { PostInterface } from '../../../models/Post';
-import { Observable } from 'rxja/Observable';
+import { PostInterface } from '../../models/Post';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-timeline',
@@ -20,6 +20,6 @@ posts: PostInterface[];
   }
 
   allPost(){
-    this.postService.getAllPost().subscribe(posts => this.posts = posts);
+    this.postService.getAllPosts().subscribe(posts => this.posts = posts);
   }
 }

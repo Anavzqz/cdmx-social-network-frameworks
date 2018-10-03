@@ -3,14 +3,16 @@
     <div class="card">
       <div class="card-header">Mensaje nuevo</div>
       <div class="card-body">
-        <div class="form">
-          <div class="form-group">
-              <input type="text" id="description" [(ngModel)]="post.description">    
-          </div>
-          <div class="col-md-4">
-              <input type="button" (ngSubmit)="onSavePost()" value="Publicar">
-          </div>
-        </div>   
+        <form #formSave="ngForm">
+          <div class="form" >
+            <div class="form-group">
+                <input type="text" id="description" name="post.description" [(ngModel)]="post.description">    
+            </div>
+            <div class="col-md-4">
+              <input type="button" (click)="onSavePost(formSave)" value="Publicar">
+            </div>
+          </div>   
+        </form>
       </div>
     </div>
   </div>

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { PostInterface } from '../models/post';
+import { PostInterface } from '../app/models/post';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -22,20 +23,20 @@ export class PostService {
     }
 
     getAllPosts():Observable<PostInterface[]>{
-      this.posts = this.postCollection.snapshotChanges()
-      .map(changes => {
+      this.posts = this.postCollection.snapshotChanges().pipe(
+      map(changes => {
         return changes.map(action => {
           const data = action.payload.doc.data() as PostInterface;
           data.id = action.payload.doc.id;
           return data;
         });
-      });
+      }));
       return this.posts;
     }
 
     getOnePost(idPost: string){
       this.postDoc = this.afs.doc<PostInterface>(`posts/${idPost}`);
-      this.post = this.postDoc.snapshotChanges().map(action => {
+      this.post = this.postDoc.snapshotChanges().pipe(map(action => {
         if(action.payload.exists === false){
           return null;
         } else {
@@ -43,7 +44,7 @@ export class PostService {
           data.id = action.payload.id;
           return data;
         }
-      });
+      }));
       return this.post;
     }
 

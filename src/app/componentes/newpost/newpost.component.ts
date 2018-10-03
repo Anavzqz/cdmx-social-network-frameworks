@@ -26,13 +26,13 @@ post : PostInterface = {
   ngOnInit() {
   }
 
-  onSavePost(){//{value}: {value: PostInterface}
-    console.log('funciona!!');/*value.date = (new Date()).getTime();
+  onSavePost({value}: {value: PostInterface}) {
+    value.date = (new Date()).getTime();
     this.authService.getAuth().subscribe( user => {
       value.userId = user.uid;
       value.userName = user.displayName;
       this.postService.addNewPost(value);
     });
-    this.router.navigate(['/']);
-  }*/
+    //this.router.navigate(['/']);
+  }
 }
