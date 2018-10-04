@@ -1,11 +1,15 @@
 <app-navbar></app-navbar>
 <div class="row">
-  <div class="col-md-8" *ngFor="let post of posts">
-    <div class="btn-roup pull-right mt-4">
+  <div class="col-md-6" *ngFor="let post of posts">
+    <div class="card-body d-flex flex-colum align-items-start">
       <a routerLink="/edit/" class="btn btn-dark">Editar</a>
       <a href="#" class="btn btn-danger" (click)="onClickDelete()">Borrar</a>
-      <span class="mb-0">{{post.date | date: 'dd-MMM'}}</span>
+      <div class="mb-1 text-mutted">
+        <span class="mb-0">{{post.date | date: 'dd-MMM'}}</span>
+      </div>
+      <p class="card-text mb-auto">{{post.description}}</p>
     </div>
   </div>
 </div>
+<div></div>
 <app-newpost></app-newpost>

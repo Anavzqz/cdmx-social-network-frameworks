@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'timeline', component: TimelineComponent},//canActivate: [AuthGuard]
   {path: 'navbar', component: NavbarComponent},
   {path: 'edit/:id', component: EditComponent},
-  {path: 'newpost/:id' component: NewpostComponent}
+  {path: 'newpost/:id', component: NewpostComponent}
   //{path: '**', component: ErrpageComponent}
 ];
 
