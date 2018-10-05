@@ -2,3 +2,35 @@ picture {
     width: 40px;
     height: 40px;
 }
+.navbar {
+    font-family: 'Lobster', cursive;
+    background: rgba(0,0,0,.5);
+    color: white;
+    font-size: 1.2em;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline;
+    padding: 8px;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    border: solid white;
+    border-radius: 30px;
+    color: white;
+    background: none;
+}
+h1 {
+ font-size: 2em;
+}

@@ -3,8 +3,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { map } from 'rxjs/operators';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +13,6 @@ export class AuthService {
     public afAuth: AngularFireAuth
   ) { }
 
-  
   registerUser(email: string, password: string){
     return new Promise((resolve, reject) => {
       this.afAuth.auth.createUserWithEmailAndPassword(email, password)
@@ -42,7 +39,6 @@ export class AuthService {
     return this.afAuth.authState.pipe(map(auth => auth));
   }
   
-
   logout(){
     return this.afAuth.auth.signOut();
   }

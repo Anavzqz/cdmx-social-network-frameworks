@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { PostInterface } from '../../models/Post';
 import { AuthService } from '../../../services/auth.service';
 import { PostService } from '../../../services/post.service';
-import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-newpost',
@@ -20,7 +21,6 @@ post : PostInterface = {
   constructor(
     private authService: AuthService,
     private postService: PostService,
-    private router: Router
   ) { }
 
   ngOnInit() {
@@ -33,6 +33,5 @@ post : PostInterface = {
       value.userName = user.displayName;
       this.postService.addNewPost(value);
     });
-    //this.router.navigate(['/']);
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -14,7 +15,8 @@ export class NavbarComponent implements OnInit {
   public userId: string;
 
   constructor(
-    public authService: AuthService
+    public authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() { //getAuth nos devuelde el estado, si es que esta logueado o no
@@ -36,5 +38,7 @@ export class NavbarComponent implements OnInit {
   }
   onLogout(){
     this.authService.logout();
+    this.router.navigate(['/']);
   }
+
 }
