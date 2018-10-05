@@ -13,6 +13,7 @@
     font-size: 1.2em;
     justify-content: left;
     background: rgba(0,0,0,.5);
+
 }
 .input-lg {
     width: 260px;
@@ -23,12 +24,12 @@
 }
 .btn-primary {
     font-family: 'Lobster', cursive;
-    font-size: 1em;
+    font-size: .8em;
     width: 260px;
     height: 30px;
     border-radius: 6px;
-    margin: 10px;
     color: gray;
     background-color: white;
     border: solid gray;
+    text-align: center;
 }

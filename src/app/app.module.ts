@@ -21,7 +21,6 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from '../environments/environment';
 import { AuthService } from '../services/auth.service';
 import { PostService } from '../services/post.service';
-//import { ErrpageComponent } from './errpage/errpage.component';
 //import { AuthGuard } from './guards/auth.guard';
  
 @NgModule({
@@ -33,7 +32,7 @@ import { PostService } from '../services/post.service';
     RegisterComponent,
     EditComponent,
     NewpostComponent,
-    //ErrpageComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,6 @@ import { TimelineComponent } from './componentes/timeline/timeline.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { EditComponent } from './componentes/edit/edit.component';
 import { NewpostComponent } from './componentes/newpost/newpost.component';
-//import { ErrpageComponent } from './componentes/errpage/errpage.component';
 
 //import { AuthGuard } from './guards/auth.guard';
 
@@ -19,7 +18,6 @@ const routes: Routes = [
   {path: 'navbar', component: NavbarComponent},
   {path: 'edit/:id', component: EditComponent},
   {path: 'newpost/:id', component: NewpostComponent}
-  //{path: '**', component: ErrpageComponent}
 ];
 
 @NgModule({
