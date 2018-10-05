@@ -1,3 +1,32 @@
 .h2 {
     font-size: 2em;
 }
+.date {
+    border: solid white;
+    color: white;
+    background-color: gray;
+    font-family: 'Lobster', cursive;
+    text-align: left;
+    font-size: 1.5em;
+    justify-content: center;
+    position: flex;
+    border-radius: 15px;
+    height: 40px;
+    opacity: .6;
+}
+.description {
+    border: solid gray;
+    color: gray;
+    background-color:none;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 1.5em;
+    justify-content: left;
+    position: flex;
+    border-radius: 15px;
+    height: 40px;
+    
+}
+.message {
+    margin: 20px;
+}

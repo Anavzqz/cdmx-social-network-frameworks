@@ -1,15 +1,16 @@
 <div class="row">
   <div class="col-md-6 mx-auto mt-2">
+    
     <div class="card">
       <div class="card-header">Mensaje nuevo</div>
       <div class="card-body">
         <form #formSave="ngForm">
           <div class="form" >
             <div class="form-group">
-                <input type="text" id="description" name="post.description" [(ngModel)]="post.description">    
+                <input type="text" id="description" name="description" [(ngModel)]="post.description">    
             </div>
-            <div class="col-md-4">
-              <input type="button" (click)="onSavePost(formSave)" value="Publicar">
+            <div class="col-md-4 btn1">
+              <input type="button" class="btn1" (click)="onSavePost(formSave)" value="Publicar">
             </div>
           </div>   
         </form>

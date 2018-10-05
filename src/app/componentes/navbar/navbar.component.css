@@ -7,21 +7,17 @@ picture {
     background: rgba(0,0,0,.5);
     color: white;
     font-size: 1.2em;
+    opacity: .5;
+    height: 100px;
 }
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 li {
-    float: left;
-}
-
-li a {
-    display: inline;
-    padding: 8px;
+    display: inline-block;
 }
 .btn{
     width: 100px;
@@ -30,7 +26,9 @@ li a {
     border-radius: 30px;
     color: white;
     background: none;
+    text-align: left;
 }
 h1 {
  font-size: 2em;
+ margin-left: 4px;
 }

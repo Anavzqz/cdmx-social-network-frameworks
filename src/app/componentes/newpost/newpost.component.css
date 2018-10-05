@@ -1,0 +1,37 @@
+.card {
+    font-family: 'Lobster', cursive;
+    color: gray;
+    font-size: 2em;
+    text-align: center;
+    margin: 10px;
+}
+.form-group {
+    background-color: none;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    justify-content: left;
+    position: flex;
+    margin: 20px;
+    border: gray;
+}
+.btn1 {
+    font-family: 'Lobster', cursive;
+    border-color: gray;
+    color: gray;
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    background: none; 
+    font-size: .9em;
+}
+#description {
+    border: solid gray;
+    background-color: none;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 1em;
+    justify-content: left;
+    position: flex;
+    border-radius: 15px;
+}

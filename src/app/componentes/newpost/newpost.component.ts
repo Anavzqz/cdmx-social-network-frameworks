@@ -33,5 +33,6 @@ post : PostInterface = {
       value.userName = user.displayName;
       this.postService.addNewPost(value);
     });
+    document.getElementById('description').value = '';
   }
 }
