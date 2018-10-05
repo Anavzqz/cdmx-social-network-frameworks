@@ -30,3 +30,7 @@
 .message {
     margin: 20px;
 }
+.btn{
+    color: gray;
+    font-size: 2em;
+}

@@ -13,8 +13,8 @@
       {{post.description}}
      </div>
      <div class="card-body d-flex flex-colum align-items-start" *ngIf="idUserLog == post.userId">
-      <a routerLink="/edit/{{post.id}}" class="btn btn-dark">Editar</a>
-      <a routerLink="" class="btn btn-danger" (click)="onClickDelete()">Borrar</a>      
+      <a routerLink="/edit/{{post.id}}" class="btn glyphicon glyphicon-pencil"></a>
+      <a routerLink="" class="glyphicon glyphicon-trash btn" (click)="onClickDelete()"></a>      
     </div>
   </div>
 </div>
