@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row divs">
-    <div class="col-md-8">
+    <div class="col-8">
       <form>
       <section class="login-form mx-auto">
         <h1>SocialPets</h1>
@@ -12,23 +12,23 @@
             <li>Ayudalos a regresar a su casa</li>
           </ul>
         </div>
-        <div class="form-group">
-            <h2>Inicia sesión</h2>
-          <label for="inputEmail">Ingresa un correo electrónico:</label>
-          <input type="email" name="email" id="nameUser" [(ngModel)]="email" placeholder="Email" required class="form-control input-lg" />
+        <div>
+          <h2><u>Inicia sesión</u></h2>
         </div>
         <div class="form-group">
-            <label for="inputEmail">Ingresa una contraseña:</label>
-          <input type="password" name="password" class="form-control input-lg" id="password" [(ngModel)]="password" placeholder="Password" required="" />
+          <input type="email" name="email" id="nameUser" [(ngModel)]="email" placeholder="correo electrónico" class="form-control input-lg" />
         </div>
-        <div class="col-md-4">       
-          <input type="button" name="signIn" (click)="onSubmitLogin()" value="Iniciar Sesión" class="btn btn-primary btn-block btn-lg">        </div>
-        <div class="col-md-4">
+        <div class="form-group">
+          <input type="password" name="password" class="form-control input-lg" id="password" [(ngModel)]="password" placeholder="contraseña"/>
+        </div>
+        <div>       
+          <input type="button" name="signIn" (click)="onSubmitLogin()" value="Aceptar" class="btn btn-primary">        </div>
+        <div>
           <button class="btn btn-lg btn-facebook" (click)="onClickFacebook()"><i class="fab fa-facebook-square"></i></button>
           <button class="btn btn-lg btn-google" (click)="onClickGoogle()"><i class="fab fa-google-plus-g"></i></button>
         </div>
         <div>
-          <a href="#"  class="count" routerLink="/register">Crear cuenta</a>   
+          <u> <a href="#"  class="count" routerLink="/register">Crear cuenta</a></u>   
         </div>      
       </section>
     </form>  
